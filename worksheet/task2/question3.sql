@@ -4,9 +4,9 @@
 SELECT
     d.DepartmentName,
     COUNT(e.EnrolmentId) AS TotalEnrolments
-FROM Departments d
-JOIN Courses c
+FROM Department d
+JOIN Course c
     ON d.DepartmentId = c.DepartmentId
-JOIN Enrolments e
+JOIN Enrolment e
     ON c.CourseId = e.CourseId
 GROUP BY d.DepartmentName;
